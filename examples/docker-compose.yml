@@ -5,12 +5,12 @@ services:
     image: itzg/minecraft-bedrock-server
     environment:
       EULA: "TRUE"
-      GAMEMODE: survival
+      GAMEMODE: creative
       DIFFICULTY: normal
     ports:
-      - 19132:19132/udp
+      - "19132:19132/udp"
     volumes:
-      - bds:/data
+      - ~/minecraft:/data
     stdin_open: true
     tty: true
 
